@@ -1,0 +1,37 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Amul gold",
+      "description": "high fat",
+      "category": "Milk",
+      "price": 33,
+      "stock": 24
+    },
+    {
+      "id": "2",
+      "name": "surf excel",
+      "description": "500g with soft wash",
+      "category": "detergent",
+      "price": 100,
+      "stock": 3
+    },
+    {
+      "id": "3",
+      "name": "crunchex",
+      "description": "balaji crunchex salted",
+      "category": "wafers",
+      "price": 10,
+      "stock": 48
+    },
+    {
+      "id": "4",
+      "name": "Nirma salt",
+      "description": "iodise salt",
+      "category": "salt and sugar",
+      "price": 20,
+      "stock": 12
+    }
+  ],
+  "errors": []
+}

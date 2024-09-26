@@ -1,0 +1,68 @@
+
+  <h1>
+    {{ isEdit ? "Edit" : "Create" }} Product
+  </h1>
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <mat-grid-list cols="3" rowHeight="80px">
+  
+    <mat-grid-tile>
+      <mat-form-field  class="inpwidth">
+        <mat-label>Product Name</mat-label>
+        <input matInput formControlName="name"  placeholder="Title" />
+        <mat-error>{{checkError(productForm.controls['name'])}}</mat-error>
+
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>    
+      <mat-form-field class="inpwidth">
+      <mat-label>Category</mat-label>
+      <input matInput formControlName="category"  placeholder="category" />
+      <mat-error>{{checkError(productForm.controls['category'])}}</mat-error>
+
+    </mat-form-field>
+  </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field class="inpwidth">
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="description"  placeholder="describe it" />
+        <mat-error>{{checkError(productForm.controls['description'])}}</mat-error>
+
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field class="inpwidth">
+        <mat-label>Price</mat-label>
+        <input matInput formControlName="price" type="number" placeholder="price" />
+        <mat-error>{{checkError(productForm.controls['price'])}}</mat-error>
+
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field class="inpwidth">
+        <mat-label>Stock</mat-label>
+        <input matInput formControlName="stock" 
+      
+        type="number" placeholder="stock" />
+        <mat-error>{{checkError(productForm.controls['stock'])}}</mat-error>
+       
+      
+        
+      </mat-form-field>
+    </mat-grid-tile> 
+  </mat-grid-list>
+
+  <button
+  type="submit"
+  
+  [disabled]="!productForm.valid"
+  mat-flat-button>
+  {{ isEdit ? "Update" : "Create" }}
+</button>
+<button
+type="submit"
+
+(click)="reset()"
+mat-flat-button>
+Reset
+</button>
+</form>

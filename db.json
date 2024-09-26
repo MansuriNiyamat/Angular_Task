@@ -1,12 +1,12 @@
 {
   "products": [
     {
-      "id": "1",
       "name": "Amul gold",
       "description": "high fat",
       "category": "Milk",
       "price": 33,
-      "stock": 24
+      "stock": 24,
+      "id": "1"
     },
     {
       "id": "2",
